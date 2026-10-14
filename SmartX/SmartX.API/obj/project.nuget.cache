@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z97mmTFmH/c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\SmartX.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\SmartX.API.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\SmartX.API.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

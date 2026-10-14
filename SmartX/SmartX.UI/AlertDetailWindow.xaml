@@ -1,0 +1,85 @@
+<Window x:Class="SmartX.UI.AlertDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Alert Details" Height="560" Width="560"
+        WindowStartupLocation="CenterOwner" Background="#1a1a2e"
+        ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header: title + status badge (left), created date + value (right) -->
+        <Grid Grid.Row="0" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock x:Name="TxtAlertTitle" Text="Alert #0" FontSize="18" FontWeight="Bold" Foreground="#ffffff" VerticalAlignment="Center"/>
+                <Border x:Name="StatusBadgeBorder" Background="#ff4444" CornerRadius="12" Padding="10,3" Margin="12,0,0,0" VerticalAlignment="Center">
+                    <TextBlock x:Name="TxtStatusBadge" Text="ACTIVE" FontSize="11" FontWeight="Bold" Foreground="White"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                <TextBlock x:Name="TxtAlertCreatedAt" Text="--" Foreground="#888" FontSize="12" HorizontalAlignment="Right"/>
+                <TextBlock x:Name="TxtAlertValue" Text="--" Foreground="#ffffff" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Editable notes + actions -->
+        <Grid Grid.Row="1" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="TxtNotesInput" Grid.Column="0" Background="#2a2a3e" Foreground="#ffffff" BorderBrush="#444"
+                     Padding="8" Margin="0,0,10,0" VerticalContentAlignment="Center"/>
+            <Button x:Name="BtnSaveNotes" Grid.Column="1" Content="Save Notes" Width="110" Background="#0f3460"
+                    Foreground="#00d4ff" FontWeight="Bold" Margin="0,0,10,0" Click="BtnSaveNotes_Click"/>
+            <Button x:Name="BtnResolveToggle" Grid.Column="2" Content="Resolve Alert" Width="120" Background="#2a2a3e"
+                    Foreground="#ff6666" FontWeight="Bold" BorderBrush="#ff4444" Click="BtnResolveToggle_Click"/>
+        </Grid>
+
+        <!-- Tags -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,15">
+            <Border Background="#3a2f00" CornerRadius="10" Padding="10,4" Margin="0,0,8,0">
+                <TextBlock x:Name="TxtSeverityTag" Text="Severity" Foreground="#ffaa00" FontSize="11" FontWeight="Bold"/>
+            </Border>
+            <Border Background="#3a2f00" CornerRadius="10" Padding="10,4">
+                <TextBlock x:Name="TxtMacTag" Text="MAC: --" Foreground="#ffaa00" FontSize="11" FontWeight="Bold"/>
+            </Border>
+        </StackPanel>
+
+        <!-- History panel -->
+        <Border Grid.Row="3" Background="#12121f" BorderBrush="#333" BorderThickness="1" CornerRadius="6" Padding="15">
+            <DockPanel>
+                <TextBlock Text="ALERT HISTORY" DockPanel.Dock="Top" Foreground="#888" FontSize="12" FontWeight="Bold" Margin="0,0,0,10"/>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="HistoryItemsControl">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Action}" Foreground="#dddddd" FontSize="12" TextWrapping="Wrap"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Timestamp, StringFormat='dd MMM yyyy, HH:mm'}" Foreground="#666" FontSize="11" Margin="10,0,0,0"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
+        </Border>
+
+        <Button x:Name="BtnCloseAlertDetail" Grid.Row="4" Content="Close" Width="120" HorizontalAlignment="Right"
+                Background="#0f3460" Foreground="#00d4ff" FontWeight="Bold" Margin="0,15,0,0" Click="BtnCloseAlertDetail_Click"/>
+    </Grid>
+</Window>

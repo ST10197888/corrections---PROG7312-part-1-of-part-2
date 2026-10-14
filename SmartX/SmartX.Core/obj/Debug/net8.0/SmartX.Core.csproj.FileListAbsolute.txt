@@ -1,0 +1,12 @@
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\bin\Debug\net8.0\SmartX.Core.deps.json
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\bin\Debug\net8.0\SmartX.Core.dll
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\bin\Debug\net8.0\SmartX.Core.pdb
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.AssemblyInfoInputs.cache
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.AssemblyInfo.cs
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.csproj.CoreCompileInputs.cache
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.sourcelink.json
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.dll
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\refint\SmartX.Core.dll
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\SmartX.Core.pdb
+C:\Users\kenne\Documents\GitHub\prog7312-group-3-2026-poe-part1-st10197888\SmartX\SmartX.Core\obj\Debug\net8.0\ref\SmartX.Core.dll
