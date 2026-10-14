@@ -1,51 +1,142 @@
 <Window x:Class="SmartX.UI.RegisterSensorWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Register Sensor" Height="555" Width="424"
-        WindowStartupLocation="CenterOwner" Background="#1a1a2e" WindowStyle="ToolWindow">
+        Title="Register Sensor"
+        Height="555"
+        Width="424"
+        MinHeight="420"
+        MinWidth="380"
+        WindowStartupLocation="CenterOwner"
+        Background="#1a1a2e"
+        WindowStyle="ToolWindow">
+
     <Grid Margin="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" Height="499" Grid.ColumnSpan="2">
-            <TextBlock Text="REGISTER NEW SENSOR" FontSize="16" FontWeight="Bold" Foreground="#00d4ff" Margin="0,0,0,25"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel VerticalAlignment="Top">
 
-            <TextBox x:Name="TxtMacAddress" Background="#2a2a3e" Foreground="#ffffff" Padding="10" Margin="0,0,0,5" Height="35" TextChanged="TxtMacAddress_TextChanged" MaxLength="17"/>
-            <TextBlock x:Name="TxtMacFormat" Text="Format: XX:XX:XX:XX:XX:XX" Foreground="#a0a0b0" FontSize="10" Margin="0,0,0,15"/>
-            <TextBlock x:Name="RegistrationStatus" Text="" Foreground="#00ff00" FontSize="11" Margin="0,0,0,15"/>
+                <TextBlock Text="REGISTER NEW SENSOR"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           Foreground="#00d4ff"
+                           Margin="0,0,0,25"/>
 
-            <TextBlock Text="Location Zone" Foreground="#00d4ff" FontSize="11" Margin="0,0,0,5"/>
-            <ComboBox x:Name="CmbLocationZone" Background="#2a2a3e" Foreground="#000000" Padding="10" Margin="0,0,0,15" Height="35">
-                <ComboBoxItem>Zone 1</ComboBoxItem>
-                <ComboBoxItem>Zone 2</ComboBoxItem>
-                <ComboBoxItem>Sub-Zone B</ComboBoxItem>
-                <ComboBoxItem>Sub-Zone C</ComboBoxItem>
-            </ComboBox>
+                <TextBox x:Name="TxtMacAddress"
+                         Background="#2a2a3e"
+                         Foreground="#ffffff"
+                         Padding="10"
+                         Margin="0,0,0,5"
+                         Height="35"
+                         TextChanged="TxtMacAddress_TextChanged"
+                         MaxLength="17"/>
 
-            <TextBlock Text="Category" Foreground="#00d4ff" FontSize="11" Margin="0,0,0,5"/>
-            <ComboBox x:Name="CmbCategory" Background="#2a2a3e" Foreground="#000000" Padding="10" Margin="0,0,0,15" Height="35">
-                <ComboBoxItem>Environmental</ComboBoxItem>
-                <ComboBoxItem>Power Consumption</ComboBoxItem>
-                <ComboBoxItem>Actuator</ComboBoxItem>
-            </ComboBox>
+                <TextBlock x:Name="TxtMacFormat"
+                           Text="Format: XX:XX:XX:XX:XX:XX"
+                           Foreground="#a0a0b0"
+                           FontSize="10"
+                           Margin="0,0,0,15"/>
 
-            <TextBlock Text="Description" Foreground="#00d4ff" FontSize="11" Margin="0,0,0,5"/>
-            <TextBox x:Name="TxtDescription" Background="#2a2a3e" Foreground="#ffffff" Padding="10" Margin="0,0,0,20" Height="60" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top"/>
-            <TextBlock Text="Attach File (Optional)" Foreground="#ccc" FontSize="11" Margin="0,0,0,5"/>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                <Button x:Name="BtnAttachFile" Content="Choose File" Width="100" Background="#0f3460" Foreground="#00d4ff" FontWeight="Bold" Click="BtnAttachFile_Click" Margin="0,0,10,0"/>
-                <TextBlock x:Name="TxtAttachedFile" Text="No file selected" Foreground="#888" FontSize="11" VerticalAlignment="Center"/>
+                <TextBlock x:Name="RegistrationStatus"
+                           Text=""
+                           Foreground="#00ff00"
+                           FontSize="11"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,15"/>
+
+                <TextBlock Text="Location Zone"
+                           Foreground="#00d4ff"
+                           FontSize="11"
+                           Margin="0,0,0,5"/>
+
+                <ComboBox x:Name="CmbLocationZone"
+                          Background="#2a2a3e"
+                          Foreground="#000000"
+                          Padding="10"
+                          Margin="0,0,0,15"
+                          Height="35">
+                    <ComboBoxItem>Zone 1</ComboBoxItem>
+                    <ComboBoxItem>Zone 2</ComboBoxItem>
+                    <ComboBoxItem>Sub-Zone B</ComboBoxItem>
+                    <ComboBoxItem>Sub-Zone C</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock Text="Category"
+                           Foreground="#00d4ff"
+                           FontSize="11"
+                           Margin="0,0,0,5"/>
+
+                <ComboBox x:Name="CmbCategory"
+                          Background="#2a2a3e"
+                          Foreground="#000000"
+                          Padding="10"
+                          Margin="0,0,0,15"
+                          Height="35">
+                    <ComboBoxItem>Environmental</ComboBoxItem>
+                    <ComboBoxItem>Power Consumption</ComboBoxItem>
+                    <ComboBoxItem>Actuator</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock Text="Description"
+                           Foreground="#00d4ff"
+                           FontSize="11"
+                           Margin="0,0,0,5"/>
+
+                <TextBox x:Name="TxtDescription"
+                         Background="#2a2a3e"
+                         Foreground="#ffffff"
+                         Padding="10"
+                         Margin="0,0,0,20"
+                         MinHeight="60"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalAlignment="Top"/>
+
+                <TextBlock Text="Attach File (Optional)"
+                           Foreground="#ccc"
+                           FontSize="11"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Button x:Name="BtnAttachFile"
+                            Content="Choose File"
+                            Width="100"
+                            Background="#0f3460"
+                            Foreground="#00d4ff"
+                            FontWeight="Bold"
+                            Click="BtnAttachFile_Click"
+                            Margin="0,0,10,0"/>
+
+                    <TextBlock x:Name="TxtAttachedFile"
+                               Text="No file selected"
+                               Foreground="#888"
+                               FontSize="11"
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0,10,0,0">
+                    <Button x:Name="BtnRegister"
+                            Content="Register"
+                            Width="100"
+                            Background="#0f3460"
+                            Foreground="#00d4ff"
+                            FontWeight="Bold"
+                            Click="BtnRegister_Click"
+                            Margin="0,0,10,0"/>
+
+                    <Button x:Name="BtnCancel"
+                            Content="Cancel"
+                            Width="100"
+                            Background="#444"
+                            Foreground="#ffffff"
+                            FontWeight="Bold"
+                            Click="BtnCancel_Click"/>
+                </StackPanel>
+
             </StackPanel>
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                <Button x:Name="BtnRegister" Content="Register" Width="100" Background="#0f3460" Foreground="#00d4ff" FontWeight="Bold" Click="BtnRegister_Click" Margin="0,0,10,0"/>
-                <Button x:Name="BtnCancel" Content="Cancel" Width="100" Background="#444" Foreground="#ffffff" FontWeight="Bold" Click="BtnCancel_Click"/>
-            </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

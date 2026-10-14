@@ -3,36 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\services\\localtelemetrystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\services\\localtelemetrystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\insightengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\insightengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\telemetryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\telemetryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\models\\insightdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\models\\insightdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\shell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\shell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\commandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\commandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\registersensorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\registersensorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\models\\commanddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\models\\commanddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\recorddetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\recorddetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\networktopologyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\networktopologyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\pipelineworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\pipelineworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\navbarcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\navbarcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\telemetrypipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\telemetrypipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\landingpageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\landingpageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\commandstreamview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\commandstreamview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\alertdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\alertdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\services\\apiclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\services\\apiclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\telemetryview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\telemetryview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\landingpageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\landingpageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,108 +81,188 @@
               "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Program.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Program.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Program.cs",
-              "RelativeToolTip": "SmartX.API\\Program.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAcwJ8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:28:12.35Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InsightEngine.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\InsightEngine.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\InsightEngine.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\InsightEngine.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\InsightEngine.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAqwNUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:27:57.396Z",
+              "Title": "TelemetryView.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\TelemetryView.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\TelemetryView.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\TelemetryView.xaml",
+              "RelativeToolTip": "SmartX.UI\\Views\\TelemetryView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:38.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "InsightDtos.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\InsightDtos.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Models\\InsightDtos.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\InsightDtos.cs",
-              "RelativeToolTip": "SmartX.API\\Models\\InsightDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:27:41.116Z",
+              "Title": "Shell.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\Shell.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\Shell.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\Shell.xaml",
+              "RelativeToolTip": "SmartX.UI\\Views\\Shell.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:37.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CommandService.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\CommandService.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\CommandService.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\CommandService.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\CommandService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:18:49.068Z",
+              "Title": "RegisterSensorWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\RegisterSensorWindow.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\RegisterSensorWindow.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\RegisterSensorWindow.xaml",
+              "RelativeToolTip": "SmartX.UI\\RegisterSensorWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:35.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CommandDtos.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\CommandDtos.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Models\\CommandDtos.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\CommandDtos.cs",
-              "RelativeToolTip": "SmartX.API\\Models\\CommandDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:18:35.263Z"
+              "Title": "RecordDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\RecordDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\RecordDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\RecordDetailWindow.xaml",
+              "RelativeToolTip": "SmartX.UI\\RecordDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:34.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TelemetryService.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryService.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\TelemetryService.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryService.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\TelemetryService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAEwCoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:36:58.049Z"
+              "Title": "NetworkTopologyView.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\NetworkTopologyView.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\NetworkTopologyView.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\NetworkTopologyView.xaml",
+              "RelativeToolTip": "SmartX.UI\\Views\\NetworkTopologyView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:32.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PipelineWorker.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\PipelineWorker.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\PipelineWorker.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\PipelineWorker.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\PipelineWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:36:21.583Z"
+              "Title": "NavBarControl.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\NavBarControl.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\NavBarControl.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\NavBarControl.xaml",
+              "RelativeToolTip": "SmartX.UI\\Views\\NavBarControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:30.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "TelemetryPipeline.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryPipeline.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\TelemetryPipeline.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryPipeline.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\TelemetryPipeline.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAqwOcAAAABAAAAAAAAAA==",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SmartX.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SmartX.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-14T22:25:25.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LandingPageView.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\LandingPageView.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\LandingPageView.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\LandingPageView.xaml",
+              "RelativeToolTip": "SmartX.UI\\Views\\LandingPageView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:23.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CommandStreamView.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\CommandStreamView.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\CommandStreamView.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\CommandStreamView.xaml",
+              "RelativeToolTip": "SmartX.UI\\Views\\CommandStreamView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:20.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\App.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\App.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\App.xaml",
+              "RelativeToolTip": "SmartX.UI\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:25:14.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlertDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\AlertDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SmartX.UI\\AlertDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\AlertDetailWindow.xaml",
+              "RelativeToolTip": "SmartX.UI\\AlertDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-14T22:24:57.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LocalTelemetryStore.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Services\\LocalTelemetryStore.cs",
+              "RelativeDocumentMoniker": "SmartX.UI\\Services\\LocalTelemetryStore.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Services\\LocalTelemetryStore.cs",
+              "RelativeToolTip": "SmartX.UI\\Services\\LocalTelemetryStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:32:28.41Z"
+              "WhenOpened": "2026-10-14T22:24:25.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApiClientFactory.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Services\\ApiClientFactory.cs",
+              "RelativeDocumentMoniker": "SmartX.UI\\Services\\ApiClientFactory.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Services\\ApiClientFactory.cs",
+              "RelativeToolTip": "SmartX.UI\\Services\\ApiClientFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T22:23:41.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LandingPageView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "RelativeToolTip": "SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T21:55:47.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TelemetryView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "RelativeToolTip": "SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "ViewState": "AgIAAE4CAAAAAAAAAAAEwHYCAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T20:26:07.091Z",
+              "EditorCaption": ""
             }
           ]
         }

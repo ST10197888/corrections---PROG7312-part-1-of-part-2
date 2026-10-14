@@ -4,116 +4,256 @@
              xmlns:local="clr-namespace:SmartX.UI.Views"
              Loaded="LandingPageView_Loaded"
              Background="#1a1a2e">
+
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="280"/>
-            <RowDefinition Height="0"/>
-            <RowDefinition Height="230"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <local:NavBarControl x:Name="NavBar" Grid.Row="0" NavigationRequested="NavBar_NavigationRequested"/>
+        <local:NavBarControl x:Name="NavBar"
+                             Grid.Row="0"
+                             NavigationRequested="NavBar_NavigationRequested"/>
 
-        <!-- Row: Content Displays 1, 2, 3 -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="12"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="12"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- 1: Local Telemetry -->
-            <Border Grid.Column="0" Background="#2a2a3e" BorderBrush="#00d4ff" BorderThickness="1" CornerRadius="5" Padding="10">
+            <Border Grid.Column="0"
+                    Background="#2a2a3e"
+                    BorderBrush="#00d4ff"
+                    BorderThickness="1"
+                    CornerRadius="5"
+                    Padding="10">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="SHARED TELEMETRY (LATEST 15)" FontSize="12" FontWeight="Bold" Foreground="#00d4ff" Margin="0,0,0,8"/>
-                    <DataGrid x:Name="LocalTelemetryGrid" AutoGenerateColumns="False" IsReadOnly="True"
-                              Background="#1a1a2e" Foreground="#00d4ff" GridLinesVisibility="None"
-                              RowBackground="#2a2a3e" AlternatingRowBackground="#252535" HeadersVisibility="Column">
+                    <TextBlock DockPanel.Dock="Top"
+                               Text="SHARED TELEMETRY (LATEST 15)"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               Foreground="#00d4ff"
+                               Margin="0,0,0,8"/>
+
+                    <DataGrid x:Name="LocalTelemetryGrid"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              MinHeight="120"
+                              Background="#1a1a2e"
+                              Foreground="#00d4ff"
+                              GridLinesVisibility="None"
+                              RowBackground="#2a2a3e"
+                              AlternatingRowBackground="#252535"
+                              HeadersVisibility="Column">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="MAC" Binding="{Binding MacAddress}" Width="*"/>
-                            <DataGridTextColumn Header="Zone" Binding="{Binding LocationZone}" Width="*"/>
-                            <DataGridTextColumn Header="Value" Binding="{Binding SensorValue}" Width="*"/>
-                            <DataGridTextColumn Header="Time" Binding="{Binding Timestamp, StringFormat=HH:mm:ss}" Width="*"/>
+                            <DataGridTextColumn Header="MAC"
+                                                Binding="{Binding MacAddress}"
+                                                Width="1.3*"/>
+                            <DataGridTextColumn Header="Zone"
+                                                Binding="{Binding LocationZone}"
+                                                Width="*"/>
+                            <DataGridTextColumn Header="Value"
+                                                Binding="{Binding SensorValue}"
+                                                Width="*"/>
+                            <DataGridTextColumn Header="Time"
+                                                Binding="{Binding Timestamp, StringFormat=HH:mm:ss}"
+                                                Width="1.2*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
             </Border>
 
-            <!-- 2: System Metrics -->
-            <Border Grid.Column="2" Background="#2a2a3e" BorderBrush="#444" BorderThickness="1" CornerRadius="5" Padding="15">
-                <StackPanel>
-                    <TextBlock Text="SYSTEM METRICS" FontSize="12" FontWeight="Bold" Foreground="#00d4ff" Margin="0,0,0,10"/>
-                    <TextBlock Text="Local Telemetry Generated" Foreground="#888" FontSize="11"/>
-                    <TextBlock x:Name="TxtLocalGenerated" Text="0" FontSize="16" FontWeight="Bold" Foreground="#00d4ff" Margin="0,0,0,8"/>
-                    <TextBlock Text="Registered API Sensors" Foreground="#888" FontSize="11"/>
-                    <TextBlock x:Name="TxtApiSensors" Text="0" FontSize="16" FontWeight="Bold" Foreground="#00d4ff" Margin="0,0,0,8"/>
-                    <TextBlock Text="Active Alerts" Foreground="#888" FontSize="11"/>
-                    <TextBlock x:Name="TxtActiveAlertCount" Text="0" FontSize="16" FontWeight="Bold" Foreground="#ff6666" Margin="0,0,0,8"/>
-                    <TextBlock Text="Resolved Alerts" Foreground="#888" FontSize="11"/>
-                    <TextBlock x:Name="TxtResolvedAlertCount" Text="0" FontSize="16" FontWeight="Bold" Foreground="#66cc99" Margin="0,0,0,8"/>
-                    <TextBlock Text="Last Update" Foreground="#888" FontSize="11"/>
-                    <TextBlock x:Name="TxtLastUpdate" Text="--:--:--" FontSize="14" FontWeight="Bold" Foreground="#ffaa00"/>
-                </StackPanel>
+            <Border Grid.Column="2"
+                    Background="#2a2a3e"
+                    BorderBrush="#444"
+                    BorderThickness="1"
+                    CornerRadius="5"
+                    Padding="15">
+                <ScrollViewer VerticalScrollBarVisibility="Auto"
+                              HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <TextBlock Text="SYSTEM METRICS"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Foreground="#00d4ff"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="Local Telemetry Generated"
+                                   Foreground="#888"
+                                   FontSize="11"/>
+                        <TextBlock x:Name="TxtLocalGenerated"
+                                   Text="0"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   Foreground="#00d4ff"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="Registered API Sensors"
+                                   Foreground="#888"
+                                   FontSize="11"/>
+                        <TextBlock x:Name="TxtApiSensors"
+                                   Text="0"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   Foreground="#00d4ff"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="Active Alerts"
+                                   Foreground="#888"
+                                   FontSize="11"/>
+                        <TextBlock x:Name="TxtActiveAlertCount"
+                                   Text="0"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   Foreground="#ff6666"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="Resolved Alerts"
+                                   Foreground="#888"
+                                   FontSize="11"/>
+                        <TextBlock x:Name="TxtResolvedAlertCount"
+                                   Text="0"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   Foreground="#66cc99"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="Last Update"
+                                   Foreground="#888"
+                                   FontSize="11"/>
+                        <TextBlock x:Name="TxtLastUpdate"
+                                   Text="--:--:--"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#ffaa00"/>
+                    </StackPanel>
+                </ScrollViewer>
             </Border>
 
-            <!-- 3: API Data / API Offline -->
-            <Border Grid.Column="4" Background="#2a2a3e" BorderBrush="#444" BorderThickness="1" CornerRadius="5" Padding="10">
+            <Border Grid.Column="4"
+                    Background="#2a2a3e"
+                    BorderBrush="#444"
+                    BorderThickness="1"
+                    CornerRadius="5"
+                    Padding="10">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="SAME TELEMETRY DATA" FontSize="12" FontWeight="Bold" Foreground="#00d4ff" Margin="0,0,0,8"/>
+                    <TextBlock DockPanel.Dock="Top"
+                               Text="SAME TELEMETRY DATA"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               Foreground="#00d4ff"
+                               Margin="0,0,0,8"/>
+
                     <Grid>
-                        <DataGrid x:Name="ApiDataGrid" AutoGenerateColumns="False" IsReadOnly="True"
-                                  Background="#1a1a2e" Foreground="#00d4ff" GridLinesVisibility="None"
-                                  RowBackground="#2a2a3e" AlternatingRowBackground="#252535" HeadersVisibility="Column">
+                        <DataGrid x:Name="ApiDataGrid"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  MinHeight="120"
+                                  Background="#1a1a2e"
+                                  Foreground="#00d4ff"
+                                  GridLinesVisibility="None"
+                                  RowBackground="#2a2a3e"
+                                  AlternatingRowBackground="#252535"
+                                  HeadersVisibility="Column">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="MAC" Binding="{Binding MacAddress}" Width="*"/>
-                                <DataGridTextColumn Header="Zone" Binding="{Binding LocationZone}" Width="*"/>
-                                <DataGridTextColumn Header="Value" Binding="{Binding SensorValue}" Width="*"/>
-                                <DataGridTextColumn Header="Time" Binding="{Binding Timestamp, StringFormat=HH:mm:ss}" Width="*"/>
+                                <DataGridTextColumn Header="MAC"
+                                                    Binding="{Binding MacAddress}"
+                                                    Width="1.3*"/>
+                                <DataGridTextColumn Header="Zone"
+                                                    Binding="{Binding LocationZone}"
+                                                    Width="*"/>
+                                <DataGridTextColumn Header="Value"
+                                                    Binding="{Binding SensorValue}"
+                                                    Width="*"/>
+                                <DataGridTextColumn Header="Time"
+                                                    Binding="{Binding Timestamp, StringFormat=HH:mm:ss}"
+                                                    Width="1.2*"/>
                             </DataGrid.Columns>
                         </DataGrid>
-                        <TextBlock x:Name="TxtApiOffline" Text="API Offline" FontSize="20" FontWeight="Bold"
-                                   Foreground="#ff4444" HorizontalAlignment="Center" VerticalAlignment="Center"
+
+                        <TextBlock x:Name="TxtApiOffline"
+                                   Text="API Offline"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#ff4444"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
                                    Visibility="Collapsed"/>
                     </Grid>
                 </DockPanel>
             </Border>
         </Grid>
 
-        <!-- Row: Content Displays 4, 5 -->
-        <Grid Grid.Row="4" Margin="0,56,0,0">
+        <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.4*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="0.6*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- 4: Latest Alerts -->
-            <Border Grid.Column="1" Background="#2a2a3e" BorderBrush="#ff4444" BorderThickness="1" CornerRadius="5" Padding="15">
+            <Border Grid.Column="0"
+                    Background="#2a2a3e"
+                    BorderBrush="#ff4444"
+                    BorderThickness="1"
+                    CornerRadius="5"
+                    Padding="15"
+                    Margin="0,0,6,0">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="LATEST ALERTS (UP TO 15)" FontSize="12" FontWeight="Bold" Foreground="#ff4444" Margin="0,0,0,10"/>
-                    <ListBox x:Name="LatestAlertsList" Background="#1a1a2e" BorderThickness="0" Foreground="#ff6666">
+                    <TextBlock DockPanel.Dock="Top"
+                               Text="LATEST ALERTS (UP TO 15)"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               Foreground="#ff4444"
+                               Margin="0,0,0,10"/>
+
+                    <ListBox x:Name="LatestAlertsList"
+                             Background="#1a1a2e"
+                             BorderThickness="0"
+                             Foreground="#ff6666">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Message}" FontSize="11" Margin="5" TextWrapping="Wrap" Foreground="#ff6666"/>
+                                <TextBlock Text="{Binding Message}"
+                                           FontSize="11"
+                                           Margin="5"
+                                           TextWrapping="Wrap"
+                                           Foreground="#ff6666"/>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </DockPanel>
             </Border>
 
-            <!-- 5: Latest Resolved Alerts -->
-            <Border Grid.Column="3" Background="#2a2a3e" BorderBrush="#00aa55" BorderThickness="1" CornerRadius="5" Padding="15">
+            <Border Grid.Column="1"
+                    Background="#2a2a3e"
+                    BorderBrush="#00aa55"
+                    BorderThickness="1"
+                    CornerRadius="5"
+                    Padding="15"
+                    Margin="6,0,0,0">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="LATEST RESOLVED ALERTS (UP TO 15)" FontSize="12" FontWeight="Bold" Foreground="#00cc66" Margin="0,0,0,10"/>
-                    <ListBox x:Name="LatestResolvedAlertsList" Background="#1a1a2e" BorderThickness="0" Foreground="#66cc99">
+                    <TextBlock DockPanel.Dock="Top"
+                               Text="LATEST RESOLVED ALERTS (UP TO 15)"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               Foreground="#00cc66"
+                               Margin="0,0,0,10"/>
+
+                    <ListBox x:Name="LatestResolvedAlertsList"
+                             Background="#1a1a2e"
+                             BorderThickness="0"
+                             Foreground="#66cc99">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Message}" FontSize="11" Margin="5" TextWrapping="Wrap" Foreground="#66cc99"/>
+                                <TextBlock Text="{Binding Message}"
+                                           FontSize="11"
+                                           Margin="5"
+                                           TextWrapping="Wrap"
+                                           Foreground="#66cc99"/>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>

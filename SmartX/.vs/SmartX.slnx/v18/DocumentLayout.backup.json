@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\telemetryview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\telemetryview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\insightengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\insightengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\models\\insightdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\models\\insightdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\commandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\commandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\models\\commanddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\models\\commanddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\telemetryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\pipelineworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\pipelineworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.api\\services\\telemetrypipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FC033E8-F118-24ED-0DDC-C7AEE228B8D8}|SmartX.API\\SmartX.API.csproj|solutionrelative:smartx.api\\services\\telemetrypipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|c:\\users\\kenne\\documents\\github\\prog7312-group-3-2026-poe-part2-st10197888\\smartx\\smartx.ui\\views\\landingpageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6657FD66-D90E-7599-8AA9-9B490068ACD5}|SmartX.UI\\SmartX.UI.csproj|solutionrelative:smartx.ui\\views\\landingpageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,108 +29,30 @@
               "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LandingPageView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "RelativeToolTip": "SmartX.UI\\Views\\LandingPageView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T21:55:47.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Program.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Program.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Program.cs",
-              "RelativeToolTip": "SmartX.API\\Program.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAcwJ8AAAAKAAAAAAAAAA==",
+              "Title": "TelemetryView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "RelativeDocumentMoniker": "SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "RelativeToolTip": "SmartX.UI\\Views\\TelemetryView.xaml.cs",
+              "ViewState": "AgIAAE4CAAAAAAAAAAAEwHUCAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:28:12.35Z",
+              "WhenOpened": "2026-10-14T20:26:07.091Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InsightEngine.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\InsightEngine.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\InsightEngine.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\InsightEngine.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\InsightEngine.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAqwNUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:27:57.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InsightDtos.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\InsightDtos.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Models\\InsightDtos.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\InsightDtos.cs",
-              "RelativeToolTip": "SmartX.API\\Models\\InsightDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:27:41.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CommandService.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\CommandService.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\CommandService.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\CommandService.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\CommandService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:18:49.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CommandDtos.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\CommandDtos.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Models\\CommandDtos.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Models\\CommandDtos.cs",
-              "RelativeToolTip": "SmartX.API\\Models\\CommandDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T18:18:35.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TelemetryService.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryService.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\TelemetryService.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryService.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\TelemetryService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAEwCoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:36:58.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PipelineWorker.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\PipelineWorker.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\PipelineWorker.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\PipelineWorker.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\PipelineWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:36:21.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TelemetryPipeline.cs",
-              "DocumentMoniker": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryPipeline.cs",
-              "RelativeDocumentMoniker": "SmartX.API\\Services\\TelemetryPipeline.cs",
-              "ToolTip": "C:\\Users\\kenne\\Documents\\GitHub\\prog7312-group-3-2026-poe-part2-st10197888\\SmartX\\SmartX.API\\Services\\TelemetryPipeline.cs",
-              "RelativeToolTip": "SmartX.API\\Services\\TelemetryPipeline.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAqwOcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T17:32:28.41Z"
             }
           ]
         }

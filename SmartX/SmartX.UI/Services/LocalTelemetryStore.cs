@@ -1,6 +1,9 @@
+
+using SmartX.Core;
 using SmartX.UI.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -12,35 +15,24 @@ namespace SmartX.UI.Services
 {
     public static class LocalTelemetryStore
     {
-        private const string API_BASE = "https://localhost:7001";
+        private const int HistoryCapacity = 5000;
+        private const int RecentReadingCapacity = 10;
 
         private static readonly Random _random = new();
-        private static readonly HttpClient _apiClient = new()
-        {
-            BaseAddress = new Uri(API_BASE),
-            Timeout = TimeSpan.FromSeconds(3)
-        };
 
-        private static readonly List<DisplayTelemetryModel> _history = new();
+        private static readonly HttpClient _apiClient = ApiClientFactory.Client;
+
+        private static readonly GenericRingBuffer<DisplayTelemetryModel>
+            _history = new(HistoryCapacity);
+
         private static readonly List<DisplayTelemetryModel> _apiHistory = new();
         private static readonly List<SensorModel> _registeredSensors = new();
-        private static int _registeredSensorIndex;
 
-        public static IReadOnlyList<DisplayTelemetryModel> ApiHistory => _apiHistory;
-        public static IReadOnlyList<SensorModel> RegisteredSensors => _registeredSensors;
+        private static int _registeredSensorIndex;
+        private static int _totalGenerated;
 
         private static DispatcherTimer? _generationTimer;
         private static bool _generationInProgress;
-
-        public static event EventHandler<DisplayTelemetryModel>? PacketGenerated;
-
-        public static event EventHandler<bool>? ApiStatusChanged;
-
-        public static int TotalGenerated => _history.Count;
-
-        public static bool ApiOnline { get; private set; }
-
-        public static IReadOnlyList<DisplayTelemetryModel> History => _history;
 
         private static readonly string[] Zones =
         {
@@ -65,11 +57,31 @@ namespace SmartX.UI.Services
             "11:22:33:44:55:66"
         };
 
-        /// <summary>
-        /// Replaces the locally cached sensor definitions with the latest definitions
-        /// returned by the API. These definitions are also used by the telemetry
-        /// generator so registered sensors actually produce telemetry.
-        /// </summary>
+        // Each zone owns a fixed-size array containing its most recent readings.
+        private static readonly double[][] _recentReadingsByZone =
+            Zones.Select(_ => new double[RecentReadingCapacity]).ToArray();
+
+        private static readonly int[] _recentReadingCounts =
+            new int[Zones.Length];
+
+        private static readonly int[] _recentReadingNextIndexes =
+            new int[Zones.Length];
+
+        public static event EventHandler<DisplayTelemetryModel>? PacketGenerated;
+
+        public static event EventHandler<bool>? ApiStatusChanged;
+
+        public static int TotalGenerated => _totalGenerated;
+
+        public static bool ApiOnline { get; private set; }
+
+        public static IReadOnlyList<DisplayTelemetryModel> History => _history;
+
+        public static IReadOnlyList<DisplayTelemetryModel> ApiHistory => _apiHistory;
+
+        public static IReadOnlyList<SensorModel> RegisteredSensors =>
+            _registeredSensors;
+
         public static void SetRegisteredSensors(IEnumerable<SensorModel> sensors)
         {
             _registeredSensors.Clear();
@@ -87,21 +99,20 @@ namespace SmartX.UI.Services
                 _registeredSensorIndex = 0;
         }
 
-        /// <summary>
-        /// Keeps a newly registered sensor usable immediately, including when
-        /// the API is unavailable.
-        /// </summary>
         public static void RegisterLocalSensor(SensorModel sensor)
         {
             if (string.IsNullOrWhiteSpace(sensor.MacAddress))
                 return;
 
-            var existing = _registeredSensors.FirstOrDefault(
-                s => string.Equals(s.MacAddress, sensor.MacAddress, StringComparison.OrdinalIgnoreCase));
+            var existing = _registeredSensors.FirstOrDefault(s =>
+                string.Equals(
+                    s.MacAddress,
+                    sensor.MacAddress,
+                    StringComparison.OrdinalIgnoreCase));
 
             if (existing != null)
             {
-                var index = _registeredSensors.IndexOf(existing);
+                int index = _registeredSensors.IndexOf(existing);
                 _registeredSensors[index] = sensor;
             }
             else
@@ -133,7 +144,36 @@ namespace SmartX.UI.Services
             _generationTimer.Start();
         }
 
+
         public static async Task<DisplayTelemetryModel?> GenerateOneAsync()
+        {
+            return await GenerateAndStoreAsync(GenerateReading());
+        }
+
+        public static async Task<DisplayTelemetryModel?> GeneratePowerTestReadingAsync(
+            bool highSeverity)
+        {
+            int wattage = highSeverity
+                ? _random.Next(9500, 10000)
+                : _random.Next(7500, 9500);
+
+            int sensorIndex = _random.Next(0, Macs.Length);
+
+            var generated = new DisplayTelemetryModel
+            {
+                MacAddress = Macs[sensorIndex],
+                LocationZone = Zones[sensorIndex],
+                Category = "Power Consumption",
+                SensorValue = wattage,
+                Timestamp = DateTime.Now,
+                Source = "(Local)"
+            };
+
+            return await GenerateAndStoreAsync(generated);
+        }
+
+        private static async Task<DisplayTelemetryModel?> GenerateAndStoreAsync(
+            DisplayTelemetryModel generated)
         {
             if (_generationInProgress)
                 return null;
@@ -142,14 +182,13 @@ namespace SmartX.UI.Services
 
             try
             {
-                var generated = GenerateReading();
-
                 DisplayTelemetryModel finalRecord;
+                bool apiSucceeded = false;
 
                 try
                 {
-                    var response = await _apiClient.PostAsJsonAsync(
-                        "/api/telemetry/ingest",
+                    using var response = await _apiClient.PostAsJsonAsync(
+                        "api/telemetry/ingest",
                         new
                         {
                             macAddress = generated.MacAddress,
@@ -161,7 +200,7 @@ namespace SmartX.UI.Services
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var json = await response.Content.ReadAsStringAsync();
+                        string json = await response.Content.ReadAsStringAsync();
 
                         var apiRecord =
                             JsonSerializer.Deserialize<ApiTelemetryModel>(
@@ -184,32 +223,38 @@ namespace SmartX.UI.Services
                                     ? $"(API - {apiRecord.SeverityLevel})"
                                     : "(API)"
                             };
-
-                            _apiHistory.Add(finalRecord);
-
-                            SetApiStatus(true);
                         }
                         else
                         {
-                            finalRecord = CreateLocalRecord(generated);
-                            SetApiStatus(false);
+                            finalRecord = new DisplayTelemetryModel
+                            {
+                                MacAddress = generated.MacAddress,
+                                LocationZone = generated.LocationZone,
+                                Category = generated.Category,
+                                SensorValue = generated.SensorValue,
+                                Timestamp = generated.Timestamp,
+                                Source = "(API)"
+                            };
                         }
+
+                        apiSucceeded = true;
+                        _apiHistory.Add(finalRecord);
                     }
                     else
                     {
                         finalRecord = CreateLocalRecord(generated);
-                        SetApiStatus(false);
                     }
                 }
                 catch
                 {
                     finalRecord = CreateLocalRecord(generated);
-                    SetApiStatus(false);
                 }
 
                 AddToHistory(finalRecord);
 
                 PacketGenerated?.Invoke(null, finalRecord);
+
+                SetApiStatus(apiSucceeded);
 
                 return finalRecord;
             }
@@ -219,20 +264,24 @@ namespace SmartX.UI.Services
             }
         }
 
+
         public static IReadOnlyList<DisplayTelemetryModel> GetApiHistory()
         {
             return _apiHistory
-                .OrderByDescending(x => x.Timestamp)
+                .OrderByDescending(record => record.Timestamp)
                 .ToList();
         }
 
         public static async Task<int> GenerateBatchAsync(int count)
         {
+            if (count <= 0)
+                return 0;
+
             int generated = 0;
 
             for (int i = 0; i < count; i++)
             {
-                var result = await GenerateOneAsync();
+                DisplayTelemetryModel? result = await GenerateOneAsync();
 
                 if (result != null)
                     generated++;
@@ -243,52 +292,88 @@ namespace SmartX.UI.Services
 
         public static IReadOnlyList<DisplayTelemetryModel> GetLatest(int count)
         {
+            if (count <= 0)
+                return Array.Empty<DisplayTelemetryModel>();
+
             return _history
-                .OrderByDescending(x => x.Timestamp)
+                .OrderByDescending(record => record.Timestamp)
                 .Take(count)
                 .ToList();
         }
 
-        private static DisplayTelemetryModel GenerateReading()
+        public static string GetRecentReadingsSummary()
         {
-            int typeSelector = _random.Next(0, Categories.Length);
+            var summaries = new List<string>();
 
-            string category = Categories[typeSelector];
-
-            object sensorValue;
-
-            switch (category)
+            for (int zoneIndex = 0; zoneIndex < Zones.Length; zoneIndex++)
             {
-                case "Environmental":
-                    sensorValue = (float)Math.Round(
-                        _random.NextDouble() * 100,
-                        2);
-                    break;
+                int count = _recentReadingCounts[zoneIndex];
 
-                case "Power Consumption":
-                    sensorValue = _random.Next(100, 10000);
-                    break;
+                if (count == 0)
+                {
+                    summaries.Add($"{Zones[zoneIndex]}: no numeric readings");
+                    continue;
+                }
 
-                case "Actuator":
-                    sensorValue = _random.Next(0, 2) == 1;
-                    break;
+                var readings = new List<double>();
 
-                default:
-                    sensorValue = 0;
-                    break;
+                for (int i = 0; i < count; i++)
+                {
+                    int index =
+                        (_recentReadingNextIndexes[zoneIndex]
+                         - count + i + RecentReadingCapacity)
+                        % RecentReadingCapacity;
+
+                    readings.Add(_recentReadingsByZone[zoneIndex][index]);
+                }
+
+                summaries.Add(
+                    $"{Zones[zoneIndex]}: " +
+                    string.Join(
+                        ", ",
+                        readings.Select(value => value.ToString(
+                            "0.##",
+                            CultureInfo.InvariantCulture))));
             }
 
+            return string.Join(" | ", summaries);
+        }
+
+
+        private static DisplayTelemetryModel GenerateReading()
+        {
             int sensorIndex = _random.Next(0, Macs.Length);
+            string category = Categories[_random.Next(0, Categories.Length)];
 
             return new DisplayTelemetryModel
             {
                 MacAddress = Macs[sensorIndex],
                 LocationZone = Zones[sensorIndex],
                 Category = category,
-                SensorValue = sensorValue,
+                SensorValue = GenerateValueForCategory(category),
                 Timestamp = DateTime.Now,
                 Source = "(API)"
             };
+        }
+
+        private static object GenerateValueForCategory(string? category)
+        {
+            switch (category)
+            {
+                case "Environmental":
+                    return (float)Math.Round(
+                        _random.NextDouble() * 100,
+                        2);
+
+                case "Power Consumption":
+                    return _random.Next(100, 10000);
+
+                case "Actuator":
+                    return _random.Next(0, 2) == 1;
+
+                default:
+                    return 0;
+            }
         }
 
         private static DisplayTelemetryModel CreateLocalRecord(
@@ -308,6 +393,75 @@ namespace SmartX.UI.Services
         private static void AddToHistory(DisplayTelemetryModel record)
         {
             _history.Add(record);
+            _totalGenerated++;
+
+            int zoneIndex = Array.IndexOf(Zones, record.LocationZone);
+
+            if (zoneIndex < 0)
+                return;
+
+            if (record.SensorValue is null)
+                return;
+
+            if (record.SensorValue is JsonElement element &&
+                (element.ValueKind == JsonValueKind.Null ||
+                 element.ValueKind == JsonValueKind.Undefined))
+            {
+                return;
+            }
+
+            if (!TryConvertToDouble(record.SensorValue, out double reading))
+                return;
+
+            // Store the reading in this zone's circular buffer.
+            int writeIndex = _recentReadingNextIndexes[zoneIndex];
+
+            _recentReadingsByZone[zoneIndex][writeIndex] = reading;
+
+            // Move to the next position, wrapping around when full.
+            _recentReadingNextIndexes[zoneIndex] =
+                (writeIndex + 1) % RecentReadingCapacity;
+
+            // Track how many valid readings are currently stored.
+            if (_recentReadingCounts[zoneIndex] < RecentReadingCapacity)
+            {
+                _recentReadingCounts[zoneIndex]++;
+            }
+        }
+
+        private static bool TryConvertToDouble(object? value, out double result)
+        {
+            result = 0;
+
+            switch (value)
+            {
+                case int i:
+                    result = i;
+                    return true;
+
+                case long l:
+                    result = l;
+                    return true;
+
+                case float f:
+                    result = f;
+                    return true;
+
+                case double d:
+                    result = d;
+                    return true;
+
+                case decimal m:
+                    result = (double)m;
+                    return true;
+
+                case System.Text.Json.JsonElement element
+                    when element.ValueKind == System.Text.Json.JsonValueKind.Number:
+                    return element.TryGetDouble(out result);
+
+                default:
+                    return false;
+            }
         }
 
         private static void SetApiStatus(bool online)

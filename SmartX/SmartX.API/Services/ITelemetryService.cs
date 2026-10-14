@@ -1,15 +1,36 @@
+
+using Microsoft.AspNetCore.Http;
 using SmartX.API.Models;
 
 namespace SmartX.API.Services
 {
     public interface ITelemetryService
     {
-        Task<TelemetryResponseDto> IngestTelemetryAsync(TelemetryIngestDto dto);
-        Task<TelemetryHistoryDto> GetTelemetryHistoryAsync(string macAddress);
+        Task<TelemetryResponseDto> IngestTelemetryAsync(
+            TelemetryIngestDto dto);
+
+        Task<TelemetryHistoryDto> GetTelemetryHistoryAsync(
+            string macAddress);
+
         Task<List<AlertDto>> GetAlertsAsync();
-        Task<AlertDto?> UpdateAlertAsync(int id, UpdateAlertDto dto);
-        Task<SensorDto> RegisterSensorAsync(RegisterSensorDto dto);
-        Task<List<TelemetryResponseDto>> GetLatestTelemetryAsync(int count);
+
+        Task<AlertDto?> UpdateAlertAsync(
+            int id,
+            UpdateAlertDto dto);
+
+        Task<SensorDto> RegisterSensorAsync(
+            RegisterSensorDto dto);
+
+        Task<List<TelemetryResponseDto>> GetLatestTelemetryAsync(
+            int count);
+
         Task<List<SensorDto>> GetAllSensorsAsync();
+
+        Task<SensorAttachmentDto?> SaveSensorAttachmentAsync(
+            string macAddress,
+            IFormFile file);
+
+        Task<SensorAttachmentDownload?> GetSensorAttachmentAsync(
+            string macAddress);
     }
 }
